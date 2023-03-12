@@ -6,16 +6,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class SignInModel extends FlutterFlowModel {
+class LogInModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for TextField widget.
-  TextEditingController? emailTextController;
-  String? Function(BuildContext, String?)? emailTextControllerValidator;
-  // State field(s) for TextField widget.
-  TextEditingController? passwordTextController;
+  // State field(s) for emailAddress widget.
+  TextEditingController? emailAddressController;
+  String? Function(BuildContext, String?)? emailAddressControllerValidator;
+  // State field(s) for password widget.
+  TextEditingController? passwordController;
   late bool passwordVisibility;
-  String? Function(BuildContext, String?)? passwordTextControllerValidator;
+  String? Function(BuildContext, String?)? passwordControllerValidator;
 
   /// Initialization and disposal methods.
 
@@ -24,8 +24,8 @@ class SignInModel extends FlutterFlowModel {
   }
 
   void dispose() {
-    emailTextController?.dispose();
-    passwordTextController?.dispose();
+    emailAddressController?.dispose();
+    passwordController?.dispose();
   }
 
   /// Additional helper methods are added here.

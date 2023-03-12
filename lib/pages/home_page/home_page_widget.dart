@@ -266,7 +266,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -367,7 +367,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       GoRouter.of(context).prepareAuthEvent();
                       await signOut();
 
-                      context.goNamedAuth('login', mounted);
+                      context.goNamedAuth('logIn', mounted);
                     },
                   ),
                   FlutterFlowIconButton(
@@ -384,7 +384,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       GoRouter.of(context).prepareAuthEvent();
                       await signOut();
 
-                      context.goNamedAuth('login', mounted);
+                      context.goNamedAuth('logIn', mounted);
                     },
                   ),
                   FlutterFlowIconButton(
@@ -401,7 +401,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       GoRouter.of(context).prepareAuthEvent();
                       await signOut();
 
-                      context.goNamedAuth('login', mounted);
+                      context.goNamedAuth('logIn', mounted);
                     },
                   ),
                 ],

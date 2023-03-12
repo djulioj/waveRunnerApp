@@ -69,18 +69,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, _) =>
-          appStateNotifier.loggedIn ? HomePageWidget() : LoginWidget(),
+          appStateNotifier.loggedIn ? HomePageWidget() : LogInWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? HomePageWidget() : LoginWidget(),
+              appStateNotifier.loggedIn ? HomePageWidget() : LogInWidget(),
           routes: [
             FFRoute(
-              name: 'login',
-              path: 'login',
-              builder: (context, params) => LoginWidget(),
+              name: 'logIn',
+              path: 'logIn',
+              builder: (context, params) => LogInWidget(),
             ),
             FFRoute(
               name: 'HomePage',
@@ -88,9 +88,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => HomePageWidget(),
             ),
             FFRoute(
-              name: 'SignIn',
-              path: 'signIn',
-              builder: (context, params) => SignInWidget(),
+              name: 'SignUp',
+              path: 'signUp',
+              builder: (context, params) => SignUpWidget(),
             ),
             FFRoute(
               name: 'NewActivity',
@@ -98,9 +98,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => NewActivityWidget(),
             ),
             FFRoute(
-              name: 'dfasdf',
-              path: 'dfasdf',
-              builder: (context, params) => DfasdfWidget(),
+              name: 'MapView',
+              path: 'mapView',
+              builder: (context, params) => MapViewWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
@@ -270,7 +270,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/login';
+            return '/logIn';
           }
           return null;
         },

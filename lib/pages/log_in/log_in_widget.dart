@@ -5,18 +5,18 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'login_model.dart';
-export 'login_model.dart';
+import 'log_in_model.dart';
+export 'log_in_model.dart';
 
-class LoginWidget extends StatefulWidget {
-  const LoginWidget({Key? key}) : super(key: key);
+class LogInWidget extends StatefulWidget {
+  const LogInWidget({Key? key}) : super(key: key);
 
   @override
-  _LoginWidgetState createState() => _LoginWidgetState();
+  _LogInWidgetState createState() => _LogInWidgetState();
 }
 
-class _LoginWidgetState extends State<LoginWidget> {
-  late LoginModel _model;
+class _LogInWidgetState extends State<LogInWidget> {
+  late LogInModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final _unfocusNode = FocusNode();
@@ -24,7 +24,7 @@ class _LoginWidgetState extends State<LoginWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => LoginModel());
+    _model = createModel(context, () => LogInModel());
 
     _model.emailAddressController ??= TextEditingController();
     _model.passwordController ??= TextEditingController();
@@ -83,12 +83,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 offset: Offset(0.0, -1.0),
                               )
                             ],
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(0.0),
-                              bottomRight: Radius.circular(0.0),
-                              topLeft: Radius.circular(16.0),
-                              topRight: Radius.circular(16.0),
-                            ),
+                            borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -384,7 +379,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     0.0, 8.0, 0.0, 44.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
-                                    context.pushNamed('SignIn');
+                                    context.pushNamed('SignUp');
                                   },
                                   text: 'Crear cuenta',
                                   options: FFButtonOptions(
