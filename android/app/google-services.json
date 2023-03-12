@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "399781254737",
+    "project_id": "waverunner-c1c54",
+    "storage_bucket": "waverunner-c1c54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399781254737:android:141f8b0c7cbb02862fca70",
+        "android_client_info": {
+          "package_name": "com.mycompany.waverunner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399781254737-4hquo7igtsh6iur46jdb1jva25vsg37m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.waverunner",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "399781254737-0ne45h85j0p6so58vqojojp16s15tnlp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoom_TB5wGiRhUEiOBdPHMbAYCeCopN8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399781254737-0ne45h85j0p6so58vqojojp16s15tnlp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "399781254737-6iidjpi08to7b4oifc7inqptpqusbdfq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.waverunner"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
