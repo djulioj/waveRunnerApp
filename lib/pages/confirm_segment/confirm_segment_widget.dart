@@ -43,8 +43,8 @@ class _ConfirmSegmentWidgetState extends State<ConfirmSegmentWidget> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Align(
                 alignment: AlignmentDirectional(-1.0, 0.0),
@@ -101,11 +101,16 @@ class _ConfirmSegmentWidgetState extends State<ConfirmSegmentWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Image.network(
-                          'https://image.winudf.com/v2/image1/Y29tLnV0aWxlc2FwcHMuY2FtYXJhc2ZvdG9tdWx0YXNiYXJyYW5xdWlsbGFfc2NyZWVuXzBfMTYwMDY0MzgxMF8wNzE/screen-0.jpg?fakeurl=1&type=.webp',
-                          width: MediaQuery.of(context).size.width * 1.0,
-                          height: MediaQuery.of(context).size.height * 0.6,
-                          fit: BoxFit.contain,
+                        InkWell(
+                          onTap: () async {
+                            context.pushNamed('Positions');
+                          },
+                          child: Image.network(
+                            'https://image.winudf.com/v2/image1/Y29tLnV0aWxlc2FwcHMuY2FtYXJhc2ZvdG9tdWx0YXNiYXJyYW5xdWlsbGFfc2NyZWVuXzBfMTYwMDY0MzgxMF8wNzE/screen-0.jpg?fakeurl=1&type=.webp',
+                            width: MediaQuery.of(context).size.width * 1.0,
+                            height: MediaQuery.of(context).size.height * 0.6,
+                            fit: BoxFit.contain,
+                          ),
                         ),
                       ],
                     ),
@@ -115,7 +120,7 @@ class _ConfirmSegmentWidgetState extends State<ConfirmSegmentWidget> {
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
                   child: FlutterFlowIconButton(
                     borderColor: FlutterFlowTheme.of(context).primaryText,
                     borderRadius: 30.0,
@@ -127,7 +132,7 @@ class _ConfirmSegmentWidgetState extends State<ConfirmSegmentWidget> {
                       size: 30.0,
                     ),
                     onPressed: () async {
-                      context.pushNamed('Positions');
+                      context.pushNamed('HomePage');
                     },
                   ),
                 ),

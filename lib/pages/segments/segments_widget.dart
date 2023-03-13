@@ -73,14 +73,17 @@ class _SegmentsWidgetState extends State<SegmentsWidget>
             children: [
               Align(
                 alignment: AlignmentDirectional(0.06, -0.85),
-                child: Text(
-                  'Segmentos',
-                  style: FlutterFlowTheme.of(context).title1.override(
-                        fontFamily: 'Lexend Deca',
-                        color: Color(0xFF090F13),
-                        fontSize: 24.0,
-                        fontWeight: FontWeight.bold,
-                      ),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                  child: Text(
+                    'Segmentos',
+                    style: FlutterFlowTheme.of(context).title1.override(
+                          fontFamily: 'Lexend Deca',
+                          color: Color(0xFF090F13),
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
                 ),
               ),
               Divider(

@@ -99,7 +99,7 @@ class _PositionsWidgetState extends State<PositionsWidget> {
                           size: 30.0,
                         ),
                         onPressed: () async {
-                          context.pushNamed('HomePage');
+                          context.pushNamed('ConfirmSegment');
                         },
                       ),
                     ),

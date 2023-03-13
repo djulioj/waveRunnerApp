@@ -9,5 +9,5 @@ export '/pages/confirm_segment/confirm_segment_widget.dart'
     show ConfirmSegmentWidget;
 export '/pages/positions/positions_widget.dart' show PositionsWidget;
 export '/pages/segments/segments_widget.dart' show SegmentsWidget;
-export '/pages/my_segments/my_segments_widget.dart' show MySegmentsWidget;
 export '/pages/my_logs/my_logs_widget.dart' show MyLogsWidget;
+export '/pages/my_segments/my_segments_widget.dart' show MySegmentsWidget;

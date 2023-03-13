@@ -123,14 +123,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => SegmentsWidget(),
             ),
             FFRoute(
-              name: 'MySegments',
-              path: 'mySegments',
-              builder: (context, params) => MySegmentsWidget(),
-            ),
-            FFRoute(
               name: 'MyLogs',
               path: 'myLogs',
               builder: (context, params) => MyLogsWidget(),
+            ),
+            FFRoute(
+              name: 'MySegments',
+              path: 'mySegments',
+              builder: (context, params) => MySegmentsWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
