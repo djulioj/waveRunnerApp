@@ -1,10 +1,7 @@
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'segments_model.dart';
@@ -17,8 +14,7 @@ class SegmentsWidget extends StatefulWidget {
   _SegmentsWidgetState createState() => _SegmentsWidgetState();
 }
 
-class _SegmentsWidgetState extends State<SegmentsWidget>
-    with TickerProviderStateMixin {
+class _SegmentsWidgetState extends State<SegmentsWidget> {
   late SegmentsModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -102,12 +98,6 @@ class _SegmentsWidgetState extends State<SegmentsWidget>
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.network(
-                          'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Cycling_%28track%29_pictogram.svg/1024px-Cycling_%28track%29_pictogram.svg.png',
-                          width: MediaQuery.of(context).size.width * 0.7,
-                          height: MediaQuery.of(context).size.height * 0.25,
-                          fit: BoxFit.scaleDown,
-                        ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),

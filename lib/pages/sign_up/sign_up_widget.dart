@@ -61,57 +61,25 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                 borderRadius: BorderRadius.circular(16.0),
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Container(
-                            height: 50.0,
-                            decoration: BoxDecoration(
-                              color:
-                                  FlutterFlowTheme.of(context).primaryBtnText,
-                            ),
-                            alignment: AlignmentDirectional(-1.0, 0.0),
-                            child: Text(
-                              'Crear cuenta',
-                              style:
-                                  FlutterFlowTheme.of(context).title1.override(
-                                        fontFamily: 'Lexend Deca',
-                                        color: Color(0xFF0F1113),
-                                        fontSize: 32.0,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Text(
-                            'Para empezar, cree una cuenta a continuación.',
-                            style:
-                                FlutterFlowTheme.of(context).bodyText2.override(
-                                      fontFamily: 'Lexend Deca',
-                                      color: Color(0xFF57636C),
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                          ),
-                        ],
-                      ),
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Text(
+                          'Crear cuenta',
+                          style: FlutterFlowTheme.of(context).title1.override(
+                                fontFamily: 'Lexend Deca',
+                                color: Color(0xFF0F1113),
+                                fontSize: 32.0,
+                                fontWeight: FontWeight.w500,
+                              ),
+                        ),
+                      ],
                     ),
                     Padding(
                       padding:
@@ -358,12 +326,18 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                     ),
                     FFButtonWidget(
                       onPressed: () async {
-                        context.pushNamed('logIn');
+                        context.pushNamed(
+                          'logIn',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.leftToRight,
+                            ),
+                          },
+                        );
                       },
                       text: 'Ya tengo cuenta',
                       options: FFButtonOptions(
-                        width: 170.0,
-                        height: 40.0,
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:

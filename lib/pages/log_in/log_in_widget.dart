@@ -67,7 +67,7 @@ class _LogInWidgetState extends State<LogInWidget> {
                           child: Image.network(
                             'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Cycling_%28track%29_pictogram.svg/1024px-Cycling_%28track%29_pictogram.svg.png',
                             width: MediaQuery.of(context).size.width * 1.0,
-                            height: MediaQuery.of(context).size.height * 0.4,
+                            height: MediaQuery.of(context).size.height * 0.2,
                             fit: BoxFit.contain,
                           ),
                         ),
@@ -384,7 +384,16 @@ class _LogInWidgetState extends State<LogInWidget> {
                                       0.0, 8.0, 0.0, 44.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      context.pushNamed('SignUp');
+                                      context.pushNamed(
+                                        'SignUp',
+                                        extra: <String, dynamic>{
+                                          kTransitionInfoKey: TransitionInfo(
+                                            hasTransition: true,
+                                            transitionType:
+                                                PageTransitionType.rightToLeft,
+                                          ),
+                                        },
+                                      );
                                     },
                                     text: 'Crear cuenta',
                                     options: FFButtonOptions(

@@ -132,7 +132,15 @@ class _ConfirmSegmentWidgetState extends State<ConfirmSegmentWidget> {
                       size: 30.0,
                     ),
                     onPressed: () async {
-                      context.pushNamed('HomePage');
+                      context.pushNamed(
+                        'Positions',
+                        extra: <String, dynamic>{
+                          kTransitionInfoKey: TransitionInfo(
+                            hasTransition: true,
+                            transitionType: PageTransitionType.bottomToTop,
+                          ),
+                        },
+                      );
                     },
                   ),
                 ),

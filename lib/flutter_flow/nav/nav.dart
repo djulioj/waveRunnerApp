@@ -103,11 +103,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => MapViewWidget(),
             ),
             FFRoute(
-              name: 'NewSegment',
-              path: 'newSegment',
-              builder: (context, params) => NewSegmentWidget(),
-            ),
-            FFRoute(
               name: 'ConfirmSegment',
               path: 'confirmSegment',
               builder: (context, params) => ConfirmSegmentWidget(),
@@ -123,14 +118,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => SegmentsWidget(),
             ),
             FFRoute(
-              name: 'MyLogs',
-              path: 'myLogs',
-              builder: (context, params) => MyLogsWidget(),
-            ),
-            FFRoute(
               name: 'MySegments',
               path: 'mySegments',
               builder: (context, params) => MySegmentsWidget(),
+            ),
+            FFRoute(
+              name: 'NewSegment',
+              path: 'newSegment',
+              builder: (context, params) => NewSegmentWidget(),
+            ),
+            FFRoute(
+              name: 'MyLogs',
+              path: 'myLogs',
+              builder: (context, params) => MyLogsWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

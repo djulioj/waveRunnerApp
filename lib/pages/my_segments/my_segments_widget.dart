@@ -65,7 +65,15 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                           size: 30.0,
                         ),
                         onPressed: () async {
-                          context.pushNamed('HomePage');
+                          context.pushNamed(
+                            'Segments',
+                            extra: <String, dynamic>{
+                              kTransitionInfoKey: TransitionInfo(
+                                hasTransition: true,
+                                transitionType: PageTransitionType.topToBottom,
+                              ),
+                            },
+                          );
                         },
                       ),
                     ),
@@ -74,15 +82,12 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
               ),
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
-                  child: Text(
-                    'Mis segmentos',
-                    textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).subtitle1.override(
-                          fontFamily: 'Lexend Deca',
-                        ),
-                  ),
+                child: Text(
+                  'Mis segmentos',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).subtitle1.override(
+                        fontFamily: 'Lexend Deca',
+                      ),
                 ),
               ),
               Divider(
@@ -103,7 +108,7 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                       children: [
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 25.0, 0.0, 25.0),
+                              0.0, 0.0, 0.0, 25.0),
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.85,
                             height: MediaQuery.of(context).size.height * 0.16,
@@ -120,9 +125,9 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                             ),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 8.0, 12.0, 8.0),
+                                  10.0, 0.0, 0.0, 0.0),
                               child: Column(
-                                mainAxisSize: MainAxisSize.min,
+                                mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Row(
@@ -161,20 +166,16 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                                       ),
                                     ],
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 17.0),
-                                    child: Text(
-                                      'Segmento #1',
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle1
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: Color(0xFF101213),
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                    ),
+                                  Text(
+                                    'Segmento #1',
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: Color(0xFF101213),
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                   ),
                                   Divider(
                                     thickness: 3.0,
@@ -206,9 +207,9 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                             ),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 8.0, 12.0, 8.0),
+                                  10.0, 0.0, 0.0, 0.0),
                               child: Column(
-                                mainAxisSize: MainAxisSize.min,
+                                mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Row(
@@ -247,20 +248,16 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                                       ),
                                     ],
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 17.0),
-                                    child: Text(
-                                      'Segmento #2',
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle1
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: Color(0xFF101213),
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                    ),
+                                  Text(
+                                    'Segmento #2',
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: Color(0xFF101213),
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                   ),
                                   Divider(
                                     thickness: 3.0,
@@ -292,9 +289,9 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                             ),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 8.0, 12.0, 8.0),
+                                  10.0, 0.0, 0.0, 0.0),
                               child: Column(
-                                mainAxisSize: MainAxisSize.min,
+                                mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Row(
@@ -333,20 +330,16 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                                       ),
                                     ],
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 17.0),
-                                    child: Text(
-                                      'Segmento #3',
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle1
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: Color(0xFF101213),
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                    ),
+                                  Text(
+                                    'Segmento #3',
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: Color(0xFF101213),
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                   ),
                                   Divider(
                                     thickness: 3.0,
@@ -378,9 +371,9 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                             ),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 8.0, 12.0, 8.0),
+                                  10.0, 0.0, 0.0, 0.0),
                               child: Column(
-                                mainAxisSize: MainAxisSize.min,
+                                mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Row(
@@ -419,20 +412,16 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                                       ),
                                     ],
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 17.0),
-                                    child: Text(
-                                      'Segmento #4',
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle1
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: Color(0xFF101213),
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                    ),
+                                  Text(
+                                    'Segmento #4',
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: Color(0xFF101213),
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                   ),
                                   Divider(
                                     thickness: 3.0,
@@ -464,9 +453,9 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                             ),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 8.0, 12.0, 8.0),
+                                  10.0, 0.0, 0.0, 0.0),
                               child: Column(
-                                mainAxisSize: MainAxisSize.min,
+                                mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Row(
@@ -505,106 +494,16 @@ class _MySegmentsWidgetState extends State<MySegmentsWidget> {
                                       ),
                                     ],
                                   ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 17.0),
-                                    child: Text(
-                                      'Segmento #5',
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle1
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: Color(0xFF101213),
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                    ),
-                                  ),
-                                  Divider(
-                                    thickness: 3.0,
-                                    indent: 80.0,
-                                    endIndent: 80.0,
-                                    color: Color(0xFF4B39EF),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 25.0),
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.85,
-                            height: MediaQuery.of(context).size.height * 0.16,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 4.0,
-                                  color: Color(0x34090F13),
-                                  offset: Offset(0.0, 2.0),
-                                )
-                              ],
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 8.0, 12.0, 8.0),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 4.0),
-                                        child: Text(
-                                          '03/01/2023',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText2
-                                              .override(
-                                                fontFamily: 'Outfit',
-                                                color: Color(0xFF57636C),
-                                                fontSize: 14.0,
-                                                fontWeight: FontWeight.normal,
-                                              ),
+                                  Text(
+                                    'Segmento #5',
+                                    style: FlutterFlowTheme.of(context)
+                                        .subtitle1
+                                        .override(
+                                          fontFamily: 'Outfit',
+                                          color: Color(0xFF101213),
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.w500,
                                         ),
-                                      ),
-                                      FlutterFlowIconButton(
-                                        borderColor: Colors.transparent,
-                                        borderRadius: 30.0,
-                                        borderWidth: 1.0,
-                                        buttonSize: 60.0,
-                                        icon: Icon(
-                                          Icons.close_rounded,
-                                          color: Color(0xFFFF0000),
-                                          size: 20.0,
-                                        ),
-                                        onPressed: () {
-                                          print('IconButton pressed ...');
-                                        },
-                                      ),
-                                    ],
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 17.0),
-                                    child: Text(
-                                      'Segmento #6',
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle1
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: Color(0xFF101213),
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                    ),
                                   ),
                                   Divider(
                                     thickness: 3.0,
