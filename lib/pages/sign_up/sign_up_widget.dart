@@ -40,7 +40,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xFFF1F4F8),
+      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -84,7 +84,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               'Crear cuenta',
                               style:
                                   FlutterFlowTheme.of(context).title1.override(
-                                        fontFamily: 'Outfit',
+                                        fontFamily: 'Lexend Deca',
                                         color: Color(0xFF0F1113),
                                         fontSize: 32.0,
                                         fontWeight: FontWeight.w500,
@@ -104,7 +104,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             'Para empezar, cree una cuenta a continuación.',
                             style:
                                 FlutterFlowTheme.of(context).bodyText2.override(
-                                      fontFamily: 'Outfit',
+                                      fontFamily: 'Lexend Deca',
                                       color: Color(0xFF57636C),
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
@@ -188,7 +188,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Outfit',
+                                      fontFamily: 'Lexend Deca',
                                       color: Color(0xFF0F1113),
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
@@ -289,7 +289,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Outfit',
+                                      fontFamily: 'Lexend Deca',
                                       color: Color(0xFF0F1113),
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
@@ -334,7 +334,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               textStyle: FlutterFlowTheme.of(context)
                                   .subtitle2
                                   .override(
-                                    fontFamily: 'Outfit',
+                                    fontFamily: 'Lexend Deca',
                                     color: Colors.white,
                                     fontSize: 18.0,
                                     fontWeight: FontWeight.w500,

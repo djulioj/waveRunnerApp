@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_place_picker.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/place.dart';
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -42,12 +39,12 @@ class _NewActivityWidgetState extends State<NewActivityWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Colors.white,
+      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
         title: Text(
-          'Create Post',
+          'Nueva Actividad',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Lexend Deca',
                 color: Color(0xFF090F13),
@@ -68,7 +65,7 @@ class _NewActivityWidgetState extends State<NewActivityWidget> {
                 size: 30.0,
               ),
               onPressed: () async {
-                context.pop();
+                context.pushNamed('HomePage');
               },
             ),
           ),
@@ -78,6 +75,7 @@ class _NewActivityWidgetState extends State<NewActivityWidget> {
       ),
       body: Column(
         mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Row(
             mainAxisSize: MainAxisSize.max,
@@ -90,19 +88,20 @@ class _NewActivityWidgetState extends State<NewActivityWidget> {
                   decoration: BoxDecoration(),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                         child: Container(
-                          width: MediaQuery.of(context).size.width * 0.96,
-                          height: 350.0,
+                          width: MediaQuery.of(context).size.width * 0.9,
+                          height: 330.0,
                           decoration: BoxDecoration(
                             color: Color(0xFFF1F4F8),
                             image: DecorationImage(
                               fit: BoxFit.cover,
                               image: Image.asset(
-                                'assets/images/emptyState@2x.png',
+                                'assets/images/bici.png',
                               ).image,
                             ),
                             boxShadow: [
@@ -116,74 +115,18 @@ class _NewActivityWidgetState extends State<NewActivityWidget> {
                           ),
                         ),
                       ),
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Expanded(
-                              child: TextFormField(
-                                controller: _model.textController,
-                                obscureText: false,
-                                decoration: InputDecoration(
-                                  hintText: 'Enter post details here...',
-                                  hintStyle: FlutterFlowTheme.of(context)
-                                      .bodyText2
-                                      .override(
-                                        fontFamily: 'Lexend Deca',
-                                        color: Color(0xFF95A1AC),
-                                        fontSize: 14.0,
-                                        fontWeight: FontWeight.normal,
-                                      ),
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0xFFF1F4F8),
-                                      width: 2.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 2.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  errorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 2.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  focusedErrorBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0x00000000),
-                                      width: 2.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
-                                          20.0, 32.0, 20.0, 12.0),
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Lexend Deca',
-                                      color: Color(0xFF090F13),
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                textAlign: TextAlign.start,
-                                maxLines: 4,
-                                validator: _model.textControllerValidator
-                                    .asValidator(context),
-                              ),
+                      Divider(
+                        thickness: 1.0,
+                      ),
+                      Text(
+                        '¡El ejercicio promueve la longevidad y mejora la calidad de vida!',
+                        textAlign: TextAlign.center,
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'Lexend Deca',
                             ),
-                          ],
-                        ),
+                      ),
+                      Divider(
+                        thickness: 1.0,
                       ),
                     ],
                   ),
@@ -192,44 +135,69 @@ class _NewActivityWidgetState extends State<NewActivityWidget> {
             ],
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
-            child: FlutterFlowPlacePicker(
-              iOSGoogleMapsApiKey: '',
-              androidGoogleMapsApiKey: '',
-              webGoogleMapsApiKey: '',
-              onSelect: (place) async {
-                setState(() => _model.placePickerValue = place);
-              },
-              defaultText: 'Tag Location',
-              icon: Icon(
-                Icons.place,
-                color: Color(0xFF95A1AC),
-                size: 16.0,
-              ),
-              buttonOptions: FFButtonOptions(
-                width: double.infinity,
-                height: 50.0,
-                color: Colors.white,
-                textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                      fontFamily: 'Lexend Deca',
-                      color: Color(0xFF95A1AC),
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w500,
-                    ),
-                borderSide: BorderSide(
-                  color: Color(0xFFF1F4F8),
-                  width: 2.0,
+            padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 50.0, 0.0),
+            child: TextFormField(
+              controller: _model.textController,
+              autofocus: true,
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: 'Nombre',
+                hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0xFF2D51D5),
+                    width: 1.0,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1.0,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                errorBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1.0,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
+                ),
+                focusedErrorBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x00000000),
+                    width: 1.0,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(4.0),
+                    topRight: Radius.circular(4.0),
+                  ),
                 ),
               ),
+              style: FlutterFlowTheme.of(context).bodyText1.override(
+                    fontFamily: 'Lexend Deca',
+                  ),
+              textAlign: TextAlign.center,
+              validator: _model.textControllerValidator.asValidator(context),
             ),
           ),
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
             child: FFButtonWidget(
-              onPressed: () {
-                print('Button pressed ...');
+              onPressed: () async {
+                context.pushNamed('MapView');
               },
-              text: 'Create Post',
+              text: 'Iniciar',
               options: FFButtonOptions(
                 width: 270.0,
                 height: 50.0,
