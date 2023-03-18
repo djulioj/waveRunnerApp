@@ -322,96 +322,103 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Container(
-                width: MediaQuery.of(context).size.width * 1.0,
-                height: MediaQuery.of(context).size.height * 0.1,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 4.0,
-                      color: Color(0x34090F13),
-                      offset: Offset(0.0, 2.0),
-                    )
-                  ],
-                  borderRadius: BorderRadius.circular(12.0),
-                ),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        FlutterFlowIconButton(
-                          borderColor: FlutterFlowTheme.of(context).primaryText,
-                          borderRadius: 30.0,
-                          borderWidth: 2.0,
-                          buttonSize: 50.0,
-                          icon: Icon(
-                            Icons.history,
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            size: 20.0,
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  height: MediaQuery.of(context).size.height * 0.1,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 4.0,
+                        color: Color(0x34090F13),
+                        offset: Offset(0.0, 2.0),
+                      )
+                    ],
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          FlutterFlowIconButton(
+                            borderColor:
+                                FlutterFlowTheme.of(context).primaryText,
+                            borderRadius: 30.0,
+                            borderWidth: 2.0,
+                            buttonSize: 50.0,
+                            icon: Icon(
+                              Icons.history,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 20.0,
+                            ),
+                            onPressed: () async {
+                              context.pushNamed(
+                                'MyLogs',
+                                extra: <String, dynamic>{
+                                  kTransitionInfoKey: TransitionInfo(
+                                    hasTransition: true,
+                                    transitionType:
+                                        PageTransitionType.bottomToTop,
+                                  ),
+                                },
+                              );
+                            },
                           ),
-                          onPressed: () async {
-                            context.pushNamed(
-                              'MyLogs',
-                              extra: <String, dynamic>{
-                                kTransitionInfoKey: TransitionInfo(
-                                  hasTransition: true,
-                                  transitionType:
-                                      PageTransitionType.bottomToTop,
-                                ),
-                              },
-                            );
-                          },
-                        ),
-                        FlutterFlowIconButton(
-                          borderColor: FlutterFlowTheme.of(context).primaryText,
-                          borderRadius: 30.0,
-                          borderWidth: 2.0,
-                          buttonSize: 50.0,
-                          icon: Icon(
-                            Icons.linear_scale_outlined,
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            size: 20.0,
+                          FlutterFlowIconButton(
+                            borderColor:
+                                FlutterFlowTheme.of(context).primaryText,
+                            borderRadius: 30.0,
+                            borderWidth: 2.0,
+                            buttonSize: 50.0,
+                            icon: Icon(
+                              Icons.linear_scale_outlined,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 20.0,
+                            ),
+                            onPressed: () async {
+                              context.pushNamed(
+                                'Segments',
+                                extra: <String, dynamic>{
+                                  kTransitionInfoKey: TransitionInfo(
+                                    hasTransition: true,
+                                    transitionType:
+                                        PageTransitionType.bottomToTop,
+                                  ),
+                                },
+                              );
+                            },
                           ),
-                          onPressed: () async {
-                            context.pushNamed(
-                              'Segments',
-                              extra: <String, dynamic>{
-                                kTransitionInfoKey: TransitionInfo(
-                                  hasTransition: true,
-                                  transitionType:
-                                      PageTransitionType.bottomToTop,
-                                ),
-                              },
-                            );
-                          },
-                        ),
-                        FlutterFlowIconButton(
-                          borderColor: FlutterFlowTheme.of(context).primaryText,
-                          borderRadius: 30.0,
-                          borderWidth: 2.0,
-                          buttonSize: 50.0,
-                          icon: Icon(
-                            Icons.logout,
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            size: 20.0,
-                          ),
-                          onPressed: () async {
-                            GoRouter.of(context).prepareAuthEvent();
-                            await signOut();
+                          FlutterFlowIconButton(
+                            borderColor:
+                                FlutterFlowTheme.of(context).primaryText,
+                            borderRadius: 30.0,
+                            borderWidth: 2.0,
+                            buttonSize: 50.0,
+                            icon: Icon(
+                              Icons.logout,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 20.0,
+                            ),
+                            onPressed: () async {
+                              GoRouter.of(context).prepareAuthEvent();
+                              await signOut();
+                              GoRouter.of(context).clearRedirectLocation();
 
-                            context.goNamedAuth('logIn', mounted);
-                          },
-                        ),
-                      ],
-                    ),
-                  ],
+                              context.goNamedAuth('logIn', mounted);
+                            },
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

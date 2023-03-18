@@ -64,17 +64,21 @@ class _LogInWidgetState extends State<LogInWidget> {
                       children: [
                         Align(
                           alignment: AlignmentDirectional(0.0, 0.0),
-                          child: Image.network(
-                            'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Cycling_%28track%29_pictogram.svg/1024px-Cycling_%28track%29_pictogram.svg.png',
-                            width: MediaQuery.of(context).size.width * 1.0,
-                            height: MediaQuery.of(context).size.height * 0.2,
-                            fit: BoxFit.contain,
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 10.0),
+                            child: Image.network(
+                              'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Cycling_%28track%29_pictogram.svg/1024px-Cycling_%28track%29_pictogram.svg.png',
+                              width: MediaQuery.of(context).size.width * 1.0,
+                              height: MediaQuery.of(context).size.height * 0.2,
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         ),
                         Align(
                           alignment: AlignmentDirectional(0.0, 0.0),
                           child: Container(
-                            width: MediaQuery.of(context).size.width * 1.0,
+                            width: MediaQuery.of(context).size.width * 0.9,
                             decoration: BoxDecoration(
                               color: Colors.white,
                               boxShadow: [
