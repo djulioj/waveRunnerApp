@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:wave_runner/pages/count/count.dart';
 import '../flutter_flow_theme.dart';
 import '../../backend/backend.dart';
 
@@ -126,6 +127,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'NewSegment',
               path: 'newSegment',
               builder: (context, params) => NewSegmentWidget(),
+            ),
+            FFRoute(
+              name: 'MyWidget',
+              path: 'myWidget',
+              builder: (context, params) => MapPage(),
+            ),
+            FFRoute(
+              name: 'Home',
+              path: 'home',
+              builder: (context, params) => Home(),
             ),
             FFRoute(
               name: 'MyLogs',

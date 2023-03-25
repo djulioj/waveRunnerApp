@@ -389,7 +389,7 @@ class _LogInWidgetState extends State<LogInWidget> {
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       context.pushNamed(
-                                        'SignUp',
+                                        'MyWidget',
                                         extra: <String, dynamic>{
                                           kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
