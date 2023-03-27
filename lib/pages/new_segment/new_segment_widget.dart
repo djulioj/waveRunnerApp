@@ -243,7 +243,7 @@ class _NewSegmentWidgetState extends State<NewSegmentWidget> {
                     child: FFButtonWidget(
                       onPressed: () async {
                         context.pushNamed(
-                          'ConfirmSegment',
+                          'Home',
                           extra: <String, dynamic>{
                             kTransitionInfoKey: TransitionInfo(
                               hasTransition: true,
