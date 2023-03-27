@@ -388,16 +388,7 @@ class _LogInWidgetState extends State<LogInWidget> {
                                       0.0, 8.0, 0.0, 44.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      context.pushNamed(
-                                        'MyWidget',
-                                        extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
-                                            hasTransition: true,
-                                            transitionType:
-                                                PageTransitionType.rightToLeft,
-                                          ),
-                                        },
-                                      );
+                                      context.pushNamed('SignUp');
                                     },
                                     text: 'Crear cuenta',
                                     options: FFButtonOptions(

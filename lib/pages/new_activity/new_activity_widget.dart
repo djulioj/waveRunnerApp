@@ -245,7 +245,7 @@ class _NewActivityWidgetState extends State<NewActivityWidget> {
                       child: FFButtonWidget(
                         onPressed: () async {
                           context.pushNamed(
-                            'MapView',
+                            'HomePage1',
                             extra: <String, dynamic>{
                               kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,

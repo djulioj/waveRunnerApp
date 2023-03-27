@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:math';
+import 'package:test/test.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -108,6 +109,29 @@ class _HomeState extends State<Home> {
         cos((lat2 - lat1) * p) / 2 +
         cos(lat1 * p) * cos(lat2 * p) * (1 - cos((lon2 - lon1) * p)) / 2;
     return 12742 * asin(sqrt(a));
+  }
+
+/**
+ * This test checks whether the calculateDistance function returns the correct 
+ * distance between two locations (Berlin, Germany and London, UK) 
+ * with a tolerance of 0.01 km (10 meters).
+ */
+
+  void test_calculateDistance() {
+    test('calculateDistance returns the correct distance', () {
+      // Arrange
+      final lat1 = 52.520008;
+      final lon1 = 13.404954;
+      final lat2 = 51.507351;
+      final lon2 = -0.127758;
+      final expectedDistance = 930.56; // in kilometers
+
+      // Act
+      final distance = calculateDistance(lat1, lon1, lat2, lon2);
+
+      // Assert
+      expect(distance, closeTo(expectedDistance, 0.01));
+    });
   }
 
   @override

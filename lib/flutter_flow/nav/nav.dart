@@ -154,7 +154,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'HomePage1',
               path: 'homePage1',
-              builder: (context, params) => HomePage(key: null!),
+              builder: (context, params) => HomePage(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

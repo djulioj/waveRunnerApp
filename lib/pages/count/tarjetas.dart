@@ -5,7 +5,7 @@ import '/pages/count/count.dart';
 import '/pages/count/entry_card.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({required Key key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Strava"),
+        title: Text("WaveRunner"),
       ),
       body: ListView(
         children: _cards,

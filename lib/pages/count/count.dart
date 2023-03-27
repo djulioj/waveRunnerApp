@@ -173,21 +173,15 @@ class _MapPageState extends State<MapPage> {
                   ),
                   padding: EdgeInsets.all(0),
                   onPressed: () async {
-Entry en = Entry(
-                                  date: DateFormat.yMMMMd('en_US')
-                                      .format(DateTime.now()),
-                                  duration: _displayTime,
-                                  speed: _speedCounter == 0
-                                      ? 0
-                                      : _avgSpeed / _speedCounter,
-                                  distance: _dist,
-                                  id: 1)
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => HomePage(
-                              key: )),
-                    );
+                    Entry en = Entry(
+                        date: DateFormat.yMMMMd('en_US').format(DateTime.now()),
+                        duration: _displayTime,
+                        speed:
+                            _speedCounter == 0 ? 0 : _avgSpeed / _speedCounter,
+                        distance: _dist,
+                        id: 1);
+
+                    Navigator.pop(context, en);
                   },
                 )
               ],

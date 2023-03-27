@@ -10,7 +10,7 @@ abstract class DB {
   static Future<void> init() async {
     try {
       String _path = await getDatabasesPath();
-      String _dbpath = p.join(_path, 'database.db');
+      String _dbpath = p.join(_path, 'database1.db');
       _db = await openDatabase(_dbpath, version: _version, onCreate: onCreate);
     } catch (ex) {
       print(ex);
@@ -20,7 +20,7 @@ abstract class DB {
   static FutureOr<void> onCreate(Database db, int version) async {
     await db.execute('''
       CREATE TABLE entries (
-        id INTEGER PRIMARY KEY NOT NULL,
+        id INTEGER,
         date STRING, 
         duration STRING, 
         speed REAL, 
