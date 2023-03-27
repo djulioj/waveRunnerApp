@@ -13,3 +13,5 @@ export '/pages/new_segment/new_segment_widget.dart' show NewSegmentWidget;
 export '/pages/my_logs/my_logs_widget.dart' show MyLogsWidget;
 export '/pages/count/count.dart' show MapPage;
 export '/pages/count/seg.dart' show Home;
+export '/pages/count/entry_card.dart' show EntryCard;
+export '/pages/count/tarjetas.dart' show HomePage;

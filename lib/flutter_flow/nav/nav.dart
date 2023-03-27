@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:wave_runner/model/entry.dart';
 import 'package:wave_runner/pages/count/count.dart';
 import '../flutter_flow_theme.dart';
 import '../../backend/backend.dart';
@@ -142,6 +143,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'MyLogs',
               path: 'myLogs',
               builder: (context, params) => MyLogsWidget(),
+            ),
+            FFRoute(
+              name: 'MyCard',
+              path: 'myCard',
+              builder: (context, params) => EntryCard(
+                entry: null!,
+              ),
+            ),
+            FFRoute(
+              name: 'HomePage1',
+              path: 'homePage1',
+              builder: (context, params) => HomePage(key: null!),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

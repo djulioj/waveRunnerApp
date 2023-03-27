@@ -6,7 +6,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
+import 'package:wave_runner/flutter_flow/nav/nav.dart';
 import '/model/entry.dart';
+import '/pages/count/tarjetas.dart';
 
 class MapPage extends StatefulWidget {
   @override
@@ -171,13 +173,21 @@ class _MapPageState extends State<MapPage> {
                   ),
                   padding: EdgeInsets.all(0),
                   onPressed: () async {
-                    Entry en = Entry(
-                        date: DateFormat.yMMMMd('en_US').format(DateTime.now()),
-                        duration: _displayTime,
-                        speed:
-                            _speedCounter == 0 ? 0 : _avgSpeed / _speedCounter,
-                        distance: _dist,
-                        id: null!);
+Entry en = Entry(
+                                  date: DateFormat.yMMMMd('en_US')
+                                      .format(DateTime.now()),
+                                  duration: _displayTime,
+                                  speed: _speedCounter == 0
+                                      ? 0
+                                      : _avgSpeed / _speedCounter,
+                                  distance: _dist,
+                                  id: 1)
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => HomePage(
+                              key: )),
+                    );
                   },
                 )
               ],
