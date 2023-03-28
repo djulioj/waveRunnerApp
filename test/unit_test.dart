@@ -17,4 +17,18 @@ void main() {
     // Assert
     expect(distance, closeTo(expectedDistance, 0.01));
   });
+
+  test('calculateSpeed returns the correct speed', () {
+    // Arrange
+    final distance = 5.0; // in km
+    final time = Duration(seconds: 9000); // 2h 30min
+    final expectedSpeed = 2; // in km/h
+
+    // Act
+    final distance_class = Distance();
+    final speed = distance_class.calculateSpeed(distance, time);
+
+    // Assert
+    expect(speed, closeTo(expectedSpeed, 0.01));
+  });
 }

@@ -8,4 +8,14 @@ class Distance {
         cos(lat1 * p) * cos(lat2 * p) * (1 - cos((lon2 - lon1) * p)) / 2;
     return 12742 * asin(sqrt(a));
   }
+
+  double calculateSpeed(double distance, Duration time) {
+    final seconds = time.inSeconds;
+    if (seconds == 0) {
+      return 0;
+    }
+    final metersPerSecond = distance / seconds;
+    final kilometersPerHour = metersPerSecond * 3600;
+    return kilometersPerHour;
+  }
 }
