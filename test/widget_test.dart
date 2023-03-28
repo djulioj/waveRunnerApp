@@ -9,10 +9,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:wave_runner/main.dart';
+import 'package:wave_runner/index.dart';
+
+import 'package:firebase_core/firebase_core.dart';
+import '../lib/backend/firebase/firebase_config.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+    await tester.pumpWidget(MaterialApp(
+        home: Scaffold(
+      body: SegmentsWidget(),
+    )));
+    expect(find.text('Nuevo'), findsOneWidget);
   });
 }
