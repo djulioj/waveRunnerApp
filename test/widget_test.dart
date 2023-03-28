@@ -14,6 +14,8 @@ import 'package:wave_runner/index.dart';
 import 'package:firebase_core/firebase_core.dart';
 import '../lib/backend/firebase/firebase_config.dart';
 
+import 'package:get/get.dart';
+
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     await tester.pumpWidget(MaterialApp(
