@@ -17,11 +17,29 @@ import '../lib/backend/firebase/firebase_config.dart';
 import 'package:get/get.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('find text in segments', (WidgetTester tester) async {
     await tester.pumpWidget(MaterialApp(
         home: Scaffold(
       body: SegmentsWidget(),
     )));
     expect(find.text('Nuevo'), findsOneWidget);
+  });
+
+  group('SegmentsWidget', () {
+    testWidgets('renders correctly', (WidgetTester tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: SegmentsWidget(),
+        ),
+      );
+
+      // Finds the 'Mis Segmentos' text
+      final misSegmentosTextFinder = find.text('Mis Segmentos');
+      expect(misSegmentosTextFinder, findsOneWidget);
+
+      // Finds the back arrow button
+      final backArrowButtonFinder = find.byIcon(Icons.arrow_back_rounded);
+      expect(backArrowButtonFinder, findsOneWidget);
+    });
   });
 }
