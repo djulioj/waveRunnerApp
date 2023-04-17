@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../flutter_flow/flutter_flow_theme.dart';
 import '/db/db.dart';
 import '/model/entry.dart';
 import '/pages/count/count.dart';
@@ -37,7 +38,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("WaveRunner"),
+        title: Text("WaveRunner",
+            style: TextStyle(
+              fontFamily: 'Outfit',
+              color: Colors.white,
+              fontSize: 18.0,
+              fontWeight: FontWeight.w500,
+            )),
+        backgroundColor: Color(0xFF4B39EF),
       ),
       body: ListView(
         children: _cards,
@@ -47,7 +55,10 @@ class _HomePageState extends State<HomePage> {
                 context, MaterialPageRoute(builder: (context) => MapPage()))
             .then((value) => _addEntries(value)),
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: Icon(
+          Icons.play_arrow,
+        ),
+        backgroundColor: Color(0xFF4B39EF),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

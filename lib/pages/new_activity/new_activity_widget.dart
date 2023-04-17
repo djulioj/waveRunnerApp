@@ -71,7 +71,7 @@ class _NewActivityWidgetState extends State<NewActivityWidget> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -98,14 +98,14 @@ class _NewActivityWidgetState extends State<NewActivityWidget> {
                 color: Color(0xFF4B39EF),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 90.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
-                          16.0, 12.0, 16.0, 20.0),
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(16.0, 5.0, 16.0, 20.0),
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.9,
                         height: MediaQuery.of(context).size.height * 0.35,
@@ -122,7 +122,7 @@ class _NewActivityWidgetState extends State<NewActivityWidget> {
                         ),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              12.0, 12.0, 12.0, 12.0),
+                              12.0, 5.0, 12.0, 12.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -241,7 +241,7 @@ class _NewActivityWidgetState extends State<NewActivityWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           context.pushNamed(

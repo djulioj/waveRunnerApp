@@ -16,24 +16,29 @@ class LogInWidget extends StatefulWidget {
 }
 
 class _LogInWidgetState extends State<LogInWidget> {
+  late TextEditingController _emailAddressController;
+  late TextEditingController _passwordController;
   late LogInModel _model;
+  late FocusNode _unfocusNode;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => LogInModel());
 
-    _model.emailAddressController ??= TextEditingController();
-    _model.passwordController ??= TextEditingController();
+    _emailAddressController =
+        _model.emailAddressController ?? TextEditingController();
+    _passwordController = _model.passwordController ?? TextEditingController();
+    _unfocusNode = FocusNode();
   }
 
   @override
   void dispose() {
     _model.dispose();
-
+    _emailAddressController.dispose();
+    _passwordController.dispose();
     _unfocusNode.dispose();
     super.dispose();
   }

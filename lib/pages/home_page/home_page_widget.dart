@@ -9,6 +9,7 @@ import 'home_page_model.dart';
 export 'home_page_model.dart';
 
 class HomePageWidget extends StatefulWidget {
+  final String userEmail = 'juan';
   const HomePageWidget({Key? key}) : super(key: key);
 
   @override
@@ -88,22 +89,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Text(
-                                'Hola,',
-                                style: FlutterFlowTheme.of(context)
-                                    .title1
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      color: Color(0xFF101213),
-                                      fontSize: 32.0,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                              ),
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    2.0, 0.0, 0.0, 0.0),
+                                    0.0, 0.0, 0.0, 0.0),
                                 child: Text(
-                                  'Maverick',
+                                  'Bienvenidx',
                                   style: FlutterFlowTheme.of(context)
                                       .title1
                                       .override(
